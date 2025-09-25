@@ -15,7 +15,7 @@
 实例化一个FutureTask 对象，把A作为参数传给FutureTask构造器
 FutureTask作为参数传给一个thread类的实例对象
 
-具体写法看：[ P1_BaseThread.java](src/main/java/P1_BaseThread.java)
+具体写法看：[ P1_BaseThread.java](src/main/java/P1/P1_1_BaseThread.java)
 
 ## 2. 用线程池创建线程的方式
 
@@ -27,7 +27,7 @@ public ThreadPoolExecutor(
        int maximumPoolSize,                 // 线程数的上限
        long keepAliveTime, TimeUnit unit,   // 线程最大空闲（Idle）时长 
        BlockingQueue<Runnable> workQueue,     // 任务的排队队列
-       ThreadFactory threadFactory,                         // 新线程的产生方式
+       ThreadFactory threadFactory,               // 新线程的产生方式
        RejectedExecutionHandler handler)    // 拒绝策略
 ```
 s1--线程池的任务调度流程（包含接收新任务和执行下一个任务）大致如下：
@@ -85,3 +85,12 @@ return new FinalizableDelegatedExecutorService(
 让线程池里的任务能按照指定时间表自动运行（一次延时或周期执行）
 普通线程池：你手动 submit(task) → 马上执行。
 定时调度线程池：你只要告诉它什么时候/多长时间执行
+
+## 3. ThreadPoolExecutor线程池的进阶使用
+
+
+
+## 4.ThreadPoolExecutor的实战
+
+
+## 5.
