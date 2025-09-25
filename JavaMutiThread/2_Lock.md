@@ -24,7 +24,7 @@ class Counter1 {
 ## 3. Java对象详解与三种锁
 ### a.一个具体的Java对象（Object实例）包含三个部分，
 Java内置锁涉及很多重要信息，这些都存放在对象结构中，并且存放于对象头的Mark Word字段中
-看图：[Java的Object实例结构](/materials/P2/StructureofObject.png)
+看图：[Java的Object实例结构](./materials/P2/StructureofObject.png)
 
 
 ### b.三位二进制组成的内置锁状态
