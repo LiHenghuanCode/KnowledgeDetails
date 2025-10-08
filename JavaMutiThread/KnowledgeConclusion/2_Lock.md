@@ -1,8 +1,13 @@
 # 二、线程安全的解决方案--锁
 
+本篇主要讲Java的一个线程安全的解决方案——使用synchronized关键字
+以及四种内置锁——
+
+
+
 ## 1.自增运算不是线程安全的
 实验：10个线程并行运行，对一个共享数据进行自增运算，每个线程自增运算3000次
-具体写法看：[ P1_BaseThread.java](src/main/java/P2/P2_1_UnsafeTest.java)
+具体写法看：[ P1_BaseThread.java](../src/main/java/P2/P2_1_UnsafeTest.java)
 
 预期结果应该是30000，但实际结果小于这个数字
 
@@ -18,13 +23,13 @@ class Counter1 {
     }
 }
 ```
-实验看：[ P2_2_SafeTest](src/main/java/P2/P2_2_SafeTest.java)
+实验看：[ P2_2_SafeTest](../src/main/java/P2/P2_2_SafeTest.java)
 
 
 ## 3. Java对象详解与三种锁
 ### a.一个具体的Java对象（Object实例）包含三个部分，
 Java内置锁涉及很多重要信息，这些都存放在对象结构中，并且存放于对象头的Mark Word字段中
-看图：![Java的Object实例结构](materials/P2/StructureofObject.png)
+看图：![Java的Object实例结构](../materials/P2/StructureofObject.png)
 
 
 ### b.三位二进制组成的内置锁状态

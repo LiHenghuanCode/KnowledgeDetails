@@ -1,5 +1,9 @@
 # CAS
 
+本篇主要讲解CAS和JUC原子类
+
+
+
 ## 1. 高级语言的原子操作不等于操作系统底层的原子操作
 
 原子操作指一条不可再分的指令
@@ -50,7 +54,7 @@ Java应用层的CAS操作主要涉及Unsafe方法的调用，具体如下：
 
 Unsafe类是一个final修饰的不允许继承的最终类,因此，我们无法在外部对Unsafe进行实例化，
 那么怎么获取Unsafe的实例呢？可以**通过反射的方式自定义**地获取Unsafe实例的辅助方法
-示例代码：[CAS基本操作](src/main/java/P3/P3_1_BaseCAS.java)
+示例代码：[CAS基本操作](../src/main/java/P3/P3_1_BaseCAS.java)
 
 ## 3. 用unsafe类和CAS原理改造不安全的自增运算
 
@@ -92,7 +96,7 @@ public void increment() {
 }
 ```
 
-具体源代码看：[CAS改造的安全自增](src/main/java/P3/P3_2_CASincrement.java)
+具体源代码看：[CAS改造的安全自增](../src/main/java/P3/P3_2_CASincrement.java)
 
 ## 3. 封装了CAS操作的JUC
 JDK 在 java.util.concurrent.atomic 包里提供了一批 原子类，

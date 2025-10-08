@@ -1,5 +1,16 @@
 # 一、多线程基础
 
+该篇主要讲解，Java的线程的创建方式
+
+
+
+
+
+
+
+
+
+
 ## 1. 基本的创建线程三种方式
 
 ### a. 直接new一个thread
@@ -15,7 +26,7 @@
 实例化一个FutureTask 对象，把A作为参数传给FutureTask构造器
 FutureTask作为参数传给一个thread类的实例对象
 
-具体写法看：[ P1_BaseThread.java](src/main/java/P1/P1_1_BaseThread.java)
+具体写法看：[ P1_BaseThread.java](../src/main/java/P1/P1_1_BaseThread.java)
 
 ## 2. 用线程池创建线程的方式
 
